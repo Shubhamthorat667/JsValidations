@@ -1,0 +1,79 @@
+body{
+  background-color: rgb(128, 193, 207);
+}
+
+
+.Container1{
+  display: flex;
+
+}
+
+.child{
+  width: 100%;
+  margin: 1%;
+}
+
+.input{
+  width: 100%;
+}
+
+input[type="email"], input[type="password"], input[type="text"],input[type="tel"],input[type="date"]
+,input[type="url"],input[type="number"],input[type="file"]{
+  padding: 10px;
+  width: 450px;
+  margin: 3px;
+  border: 1px solid #ccc;
+  background-color: aliceblue;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#View{
+  padding: 10px;
+  width: 100px;
+  margin: 3px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: rgb(139, 139, 225);
+}
+
+#countryCode{
+  padding: 10px;
+  width: 80px;
+  margin: 3px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#currencySymbol{
+  padding: 10px;
+  width: 80px;
+  margin: 3px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#textArea{
+  padding: 10px;
+  width: 450px;
+  margin: 3px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 100px;
+}
+
+#Submit {
+  padding: 10px;
+  width: 100px;
+  margin-top: 20px;
+  margin-left: 600px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: rgb(139, 139, 225);
+}
+

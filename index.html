@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registation Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="Container" name="entry">
+      <div class="Container1">
+
+        <div class="email child">
+          <!-- email -->
+          <label for="exampleInputEmail" style="font-size: 25px;">Enter your email:</label><br>
+          <input type="email" id="exampleInputEmail" placeholder="Enter email address" name="email">
+          <div id="emailValidText"></div>
+          <!-- <button onclick="validateEmail()">Submit</button> -->
+        </div>
+
+
+
+        <div class="pass child">
+          <!-- Password -->
+          <label for="pwd" style="font-size: 25px;">Password:</label><br>
+          <input type="password" id="pwd" placeholder="Enter password" name="pwd"
+            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[#$@!%&*?])[A-Za-z\d#$@!%&*?]{8,16}$"
+            oninput="updatePasswordSuggestion()">
+          <br>
+          <div id="password-suggestion"></div>
+          <BUtton><span class="password-toggle" onclick="togglePasswordVisibility()" id="viewBtn">View</span></BUtton>
+
+        </div>
+
+
+      </div>
+
+      <div class="Container1">
+
+        <div class="alphatext child">
+          <!-- Alphatext -->
+          <label for="alphatext" style="font-size: 25px;">Alphatext:</label><br>
+          <input type="text" id="alphatext" name="user_input" placeholder="Enter alpha" onkeydown="return /[a-zA-Z]/i.test(event.key)">
+          <div id="alphatextValidatetext"></div>
+          <!-- <button onclick="validateAlphatext()">Submit</button> -->
+        </div>
+
+        <div class="phoneno child">
+          <!-- Phone Number -->
+          <label for="phoneNumber" style="font-size: 25px;">Phone Number:</label>
+          <div>
+            <select id="countryCode" name="countryCode" required="">
+              <option value="+91">+91 </option>
+              <option value="+1">+1 </option>
+              <option value="+44">+44</option>
+              <!-- Add more options for other countries -->
+            </select>
+            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" required="" pattern="\d{10}" oninput="validateNumericInput(this)">
+            <div id="phoneNumberValidatetext"></div>
+          </div>
+          <!-- <button onclick="validatePhoneNumber()">Submit</button> -->
+        </div>
+
+      </div>
+
+
+      <div class="Container1" name="radiocheck">
+        <div class="gender child">
+          <!-- Gender -->
+          <p style="font-size: 25px;">Gender:</p>
+          <input type="radio" id="male" name="gender" value="Male">
+          <label for="male">Male</label><br>
+          <input type="radio" id="female" name="gender" value="Female">
+          <label for="female">Female</label><br>
+          <div id="genderValidatetext"></div>
+          <!-- <button onclick="validateGender()">Submit</button> -->
+        </div>
+
+        <div class="datepicker child">
+          <!-- Date Picker -->
+          <label for="datepicker" style="font-size: 25px;">Birth Date:</label><br>
+          <input type="date" id="datepicker" name="datepicker">
+          <div id="birthdateValidatetext"></div>
+          <!-- <button onclick="validateBirthdate()">Submit</button> -->
+        </div>
+
+      </div>
+
+      <div class="Container1">
+
+        <div class="URL child">
+          <!-- URL Field -->
+          <label for="url" style="font-size: 25px;">URL Link:</label><br>
+          <input type="url" id="url" placeholder="Enter URL" name="url">
+          <div id="urlValidatetext"></div>
+          <!-- <button onclick="validateURL()">Submit</button> -->
+        </div>
+
+        <div class="CurrencyField child">
+          <!-- Currency Field -->
+          <label for="currencyInput" style="font-size: 25px;">Amount:</label><br>
+          <div>
+            <select id="currencySymbol" name="currencySymbol">
+              <option value="₹">₹ </option>
+              <option value="$">$ </option>
+              <option value="€">€ </option>
+              <!-- Add more options for other currency symbols -->
+            </select>
+            <input type="number" id="currencyInput" name="currencyInput" placeholder="Enter amount" required="">
+            <div id="currencyValidatetext"></div>
+          </div>
+          <!-- <button onclick="validateCurrencyField()">Submit</button> -->
+        </div>
+
+      </div>
+
+      <div class="Container1">
+
+         <div class="Textarea child">
+            <!-- Textarea -->
+                <p><label for="textArea" style="font-size: 25px;">Text Area:</label></p>
+                <textarea id="textArea" name="textArea" placeholder=" Text Area"></textarea>
+                <div id="textareaValidatetext"></div>
+                <!-- <button onclick="validateTextarea()">Submit</button> -->
+        </div>
+
+        <div class="Checkbox child">
+          <!-- Checkbox Group -->
+          <p style="font-size: 25px;">Checkboxes</p>
+          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+          <label for="vehicle1"> MEAN</label><br>
+          <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+          <label for="vehicle2"> Blockchain </label><br>
+          <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+          <label for="vehicle3"> React</label><br>
+          <input type="checkbox" id="vehicle4" name="vehicle4" value="BA">
+          <label for="vehicle4"> BA</label><br>
+          <div id="checkboxValidatetext"></div>
+          <!-- <button onclick="validateCheckboxes()">Submit</button> -->
+        </div>
+
+      </div>
+
+
+      <div class="Container1">
+
+        <div class="Image child">
+          <!-- Image Upload -->
+          <label for="imageInput" style="font-size: 25px;">Select an image:</label><br>
+          <input type="file" id="imageInput" name="imageInput" accept="image/*" onchange="previewImage()">
+          <div id="imagePreview"></div>
+          <button id="uploadButton" onclick="uploadImage()">Upload</button>
+        </div>
+
+        <div class="color child">
+          <!-- color field validation -->
+          <label for="colorInput" style="font-size: 25px;">Enter a color:</label><br>
+          <input type="color" id="colorInput" name="colorInput" required>
+          <span id="colorError" class="error"></span>
+        </div>
+
+
+      </div>
+
+
+    </div>
+    <button id="Submit"onclick="submit()">submit</button>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>
